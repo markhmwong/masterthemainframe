@@ -19,17 +19,23 @@
         </div>
         <div>
             <h2>Divisions<a href="/code/divisionExample.cob">Code</a></h2>
-            <p>Identification Division.</p>
-            <p>Contains the Program-ID, author and date.</p>
-            <p>Environment Division.</p>
-            <p>Basically the environment the program is running on (the mainframe it's running on). The devices available, and regional specific information.</p>
-            <p>Data Division.</p>
-            <p>Has 4 sections, file, working-storage, linkage and report.</p>
-            <p>Procedure Division.</p>
+            <p>Identification Division. Contains the Program-ID, author and date.</p>
+            <p>Environment Division. Basically the environment the program is running on (the mainframe it's running on). The devices available, and regional specific information.</p>
+            <p>Data Division. Has 4 sections, file, working-storage, linkage and report, containing variables related to the program.</p>
+            <p>Procedure Division. The working program belongs here.</p>
         </div>
         <div>
-            <h2>Variables</h2>
-            
+            <h2>Variables<a href="/code/variableExample.cob">Code</a></h2>
+            <p>Hierarchial in nature. The left most digits denote the level the variable sits compared to others. Usually sits within Data Division, under one of the sections. A typical variable would be written as</p>
+            <p>01 MYVAR PIC X(30) VALUE "TENET".</p>
+            <ul>
+                <li>01 denotes the position in the hierarchical ladder</li>
+                <li>MYVAR is the name of the variable</li>
+                <li>PIC is a picture</li>
+                <li>X is basically the Type in this case it's alphnumeric</li>
+                <li>(30) denotes the length of the variable</li>
+                <li>VALUE allows the variable to be initialised with a value which in this case it's TENET</li>
+            </ul>
         </div>
     </body>
     <footer>
