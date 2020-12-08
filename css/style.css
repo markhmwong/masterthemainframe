@@ -11,7 +11,7 @@ pre.code {
 
 mark {
     color: #0d99ee;
-    background-color: none;
+    background-color: transparent;
 }
 
 #top-navigation {
