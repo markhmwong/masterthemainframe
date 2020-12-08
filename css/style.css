@@ -28,13 +28,16 @@ footer {
 
 /* FONTS */
 .primary-title {
-
+    font-size: 2.5em;
+    color: #111111;
 }
 
 .secondary-title {
-
+    font-size: 2.0em;
+    color: #111111;
 }
 
 .tertiary-title {
-
+    font-size: 10.5m;
+    color: #111111;
 }
