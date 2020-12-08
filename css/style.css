@@ -1,6 +1,18 @@
+/* 
+    COLORS
+    black - #111111
+    gray - #747474
+    white - f7f7f7
+*/
+
 #top-navigation {
     grid-column-start: 1;
     grid-column-end: 3;
+}
+
+a {
+    color: #111111;
+    text-decoration: none;
 }
 
 body {
