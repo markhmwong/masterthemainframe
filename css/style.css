@@ -5,6 +5,10 @@
     white - f7f7f7
 */
 
+pre.code {
+    background-color: #dcdcdc
+}
+
 #top-navigation {
     grid-column-start: 1;
     grid-column-end: 3;
@@ -29,7 +33,7 @@ body {
 
 .grid {
     display: grid;
-    max-width: 1000px;
+    max-width: 1100px;
     grid-template-columns: 8fr 2fr;
     grid-gap: 20px;
 }
@@ -53,7 +57,7 @@ h2, .secondary-title {
 
 h3, .tertiary-title {
     font-size: 1.5em;
-    color: #262626;
+    color: #181818;
 }
 
 h4, .tertiary-title {
