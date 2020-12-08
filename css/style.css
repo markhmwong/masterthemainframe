@@ -7,11 +7,13 @@
 
 pre.code {
     background-color: #dcdcdc;
+    text-transform: uppercase;
 }
 
 mark {
     color: #0d99ee;
     background-color: transparent;
+    text-transform: uppercase;
 }
 
 #top-navigation {
