@@ -21,7 +21,7 @@
                     <ul>Divisions</ul>
                     <ul>Variables</ul>
                     <ul>Grouping Variables</ul>
-                    
+                    <!-- <ul>Setting up a typical COBOL file</ul> -->
                 </nav>
                 <div>
                     <h2>File Structure</h2>
@@ -39,14 +39,21 @@
                 </div>
                 <div>
                     <h3>Divisions</h3><a href="/cobol/code/divisionExample.cob">Code</a>
-                    <p>Identification Division. Contains the Program-ID, author and date.</p>
-                    <p>Environment Division. Basically the environment the program is running on (the mainframe it's running on). The devices available, and regional specific information.</p>
-                    <p>Data Division. Has 4 sections, file, working-storage, linkage and report, containing variables related to the program.</p>
-                    <p>Procedure Division. The working program belongs here.</p>
+                    <p><mark>Identification Division.</mark> Contains the Program-ID, author and date.</p>
+                    <p><mark>Environment Division.</mark> Basically the environment the program is running on (the mainframe it's running on). The devices available, and regional specific information.</p>
+                    <p><mark>Data Division</mark> Has 4 sections, file, working-storage, linkage and report, containing variables related to the program.</p>
+                    <p><mark>Procedure Division.</mark> The working program belongs here.</p>
                 </div>
-                <div>
+                <div> <!-- Variables -->
                     <div>
                         <h2>Variables</h2><a href="/cobol/code/variableExample.cob">Code</a>
+                        <h3>3 Data Types</h3>
+                        <ul>
+                            <li>Alphabetic <mark>A</mark></li>
+                            <li>Alphanumeric <mark>X</mark></li>
+                            <li>Numeric <mark>9</mark></li>
+                        </ul>
+                        <h3>Declaration</h3>
                         <p>Hierarchial in nature. The left most digits denote the level the variable sits compared to others. Usually sits within Data Division, under one of the sections. A typical variable would be written as</p>
                     </div>
                     <div>
@@ -75,7 +82,7 @@
                     </div>
                     <div>
                         <h3>Constant Variables</h3>
-                        <p>Constant variable types include figurative constants not constants represented by a character(s). A custom constant can be define through a variable as well. Using the <mark>CONSTANT AS</mark> reserved words allows to declare a user defined constant. HIGH/LOW-VALUEs to do...</p>
+                        <p>Constant variable types include figurative constants not constants represented by a character(s). A custom constant can be define through a variable as well. Using the <mark>CONSTANT AS</mark> reserved words allows to declare a user defined constant. HIGH/LOW-VALUEs Assigns largest/lowest value of defined type</p>
                         <pre class="code">
     ZERO, ZEROS, 0
     SPACE, SPACES, "   "
@@ -85,16 +92,31 @@
                 </div>
             
                 <div>
-                    <h3>User Input/Output</h3>
+                    <h2>User Input/Output</h2>
+                    <h3>ACCEPT</h3>
                     <p>Use the <mark>ACCEPT</mark> reserved word to accept input from the user.</p>
                     <pre class="code">ACCEPT MYVAR</pre>
+                    <h3>DISPLAY</h3>
                     <p>To print to the display use the <mark>DISPLAY</mark> reserved word.</p>
-                    <pre class="code">DISPLAY "Hello World"</pre>
+                    <pre class="code">DISPLAY "Hello World" MYVAR</pre>
                     <p>It's also possible to append to the end <mark>WITH NO ADVANCING</mark> meaning it will not return a newline. <mark>WITH ADVANCING</mark> has the opposite effect.</p>
+                    <pre class="code">DISPLAY "Hello World" MYVAR WITH NO ADVANCING</pre>
+                    <h3>Inputs </h3>
                 </div>
 
+                <div>
+                    <h2>Assignment</h2>
+                    <p>In other languages we use the equals sign when we want to copy a value or a reference from one variable to another. In COBOL, we use <mark>MOVE TO</mark>.</p>
+                    <pre class="code">MOVE ZERO TO MYVAR</pre>
+                </div>
+
+                <div>
+                    <h2>Maths</h2>
+                    <p>In other languages we use the equals sign when we want to copy a value or a reference from one variable to another. In COBOL, we use <mark>MOVE TO</mark>.</p>
+                    <pre class="code">MOVE ZERO TO MYVAR</pre>
+                </div>
         
-            </div> 
+            </div> <!-- End details-->
         </div> <!-- End Grid -->
     </body>
     <footer>
