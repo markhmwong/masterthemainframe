@@ -19,6 +19,9 @@
                 <nav>
                     <ul>File Structure</ul>
                     <ul>Divisions</ul>
+                    <ul>Variables</ul>
+                    <ul>Grouping Variables</ul>
+                    
                 </nav>
                 <div>
                     <h2>File Structure</h2>
@@ -27,31 +30,54 @@
                     <p>7th column is used for a * to denote a comment.</p>
                 </div>
                 <div>
-                    <h2>Divisions<a href="cobol/code/divisionExample.cob">Code</a></h2>
+                    <h2>Divisions</h2><a href="/cobol/code/divisionExample.cob">Code</a>
                     <p>Identification Division. Contains the Program-ID, author and date.</p>
                     <p>Environment Division. Basically the environment the program is running on (the mainframe it's running on). The devices available, and regional specific information.</p>
                     <p>Data Division. Has 4 sections, file, working-storage, linkage and report, containing variables related to the program.</p>
                     <p>Procedure Division. The working program belongs here.</p>
                 </div>
                 <div>
-                    <h2>Variables<a href="cobol/code/variableExample.cob">Code</a></h2>
-                    <p>Hierarchial in nature. The left most digits denote the level the variable sits compared to others. Usually sits within Data Division, under one of the sections. A typical variable would be written as</p>
-                    <p>01 MYVAR PIC X(30) VALUE "TENET".</p>
-                    <ul>
-                        <li>01 denotes the position in the hierarchical ladder</li>
-                        <li>MYVAR is the name of the variable</li>
-                        <li>PIC is a picture</li>
-                        <li>X is basically the Type in this case it's alphnumeric</li>
-                        <li>(30) denotes the length of the variable</li>
-                        <li>VALUE allows the variable to be initialised with a value which in this case it's TENET</li>
-                    </ul>
-                    <p>It's important to note that variables in COBOL are like arrays - hence the length of a variable is paramount when defining it. Hierarchical variables are the same.</p>
-                    <p>01 MOBILENUMBER.</p>
-                    <p>     02 COUNTRYCODE PIC 99.</p>
-                    <p>     02 NUM PIC 9(9).</p>
-        
-                    todo constants 8min mark
+                    <div>
+                        <h2>Variables</h2><a href="/cobol/code/variableExample.cob">Code</a>
+                        <p>Hierarchial in nature. The left most digits denote the level the variable sits compared to others. Usually sits within Data Division, under one of the sections. A typical variable would be written as</p>
+                    </div>
+                    <div>
+                        <h3>Declaring Variables</h3>
+                        <p>01 MYVAR PIC X(30) VALUE "TENET".</p>
+                        <ul>
+                            <li>01 denotes the position in the hierarchical ladder</li>
+                            <li>MYVAR is the name of the variable</li>
+                            <li>PIC is a picture</li>
+                            <li>X is basically the Type in this case it's alphnumeric</li>
+                            <li>(30) denotes the length of the variable</li>
+                            <li>VALUE allows the variable to be initialised with a value which in this case it's TENET</li>
+                        </ul>
+                        <p>It's important to note that variables in COBOL are like arrays - hence the length of a variable is paramount when defining it. Hierarchical variables are the same.</p>
+                    </div>
+                    <div>
+                        <h3>Grouping Variables</h3>
+                        <p>An example below shows MOBILENUMBER is grouped by two variables COUNTRYCODE and NUM, with a total length of 11.</p>
+                        <p>01 MOBILENUMBER.</p>
+                        <p><pre>    02 COUNTRYCODE PIC 99.</pre></p>
+                        <p><pre>    02 NUM PIC 9(9).</pre></p>
+                    </div>
+                    <div>
+                        <h3>Constant Variables</h3>
+                        <p>Constant variable types include figurative constants not constants represented by a character(s). A custom constant can be define through a variable as well.</p>
+                        <p>ZERO, ZEROS, 0</p>
+                        <p>SPACE, SPACES, "   "</p>
+                        <p>HIGH-VALUE(S), LOW-VALUE(S)</p>
+                        <p>01 PIValue CONSTANT AS 3.14.</p>
+                    </div>
                 </div>
+            
+                <div>
+                    <h3>User Input/Outpu</h3>
+                    <p>Use the ACCEPT reserved word to accept input from the user.</p>
+                    <p>To print to the display use the DISPLAY reserved word.</p>
+                </div>
+
+        
             </div> 
         </div> <!-- End Grid -->
     </body>
