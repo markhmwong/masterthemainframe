@@ -1,3 +1,8 @@
+#top-navigation {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
 body {
     display: flex;
     font-family: Arial, "Helvetica", sans-serif;
@@ -21,11 +26,6 @@ footer {
     grid-column-end: 3;
 }
 
-#top-navigation {
-    grid-column-start: 1;
-    grid-column-end: 3;
-}
-
 /* FONTS */
 .primary-title {
     font-size: 2.5em;
@@ -38,6 +38,6 @@ footer {
 }
 
 .tertiary-title {
-    font-size: 10.5m;
-    color: #111111;
+    font-size: 0.5m;
+    color: #747474;
 }
