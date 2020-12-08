@@ -6,7 +6,12 @@
 */
 
 pre.code {
-    background-color: #dcdcdc
+    background-color: #dcdcdc;
+}
+
+mark {
+    color: #0d99ee;
+    background-color: none;
 }
 
 #top-navigation {
