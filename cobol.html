@@ -3,50 +3,62 @@
     <head>
         <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
+    <body class="wrapper">
+        <div class="grid">
+            <div class="left-col">
+                <h1>COBOL</h1>
+                <p>A brief overview of the COBOL programming language with personalised notes.</p>
+                <p>Despite the many calls of modern programmers calling COBOL a dead language, it still reigns supreme (like good old Kimmy over in North Korea); ubiquitous in financial transactions across the world; US, Australia, parts of asia and China rely on COBOL.</p>
+
+                <nav>
+                    <ul>File Structure</ul>
+                    <ul>Divisions</ul>
+                </nav>
+                <div>
+                    <h2>File Structure</h2>
+                    <p>You'll find that COBOL is semi based on columns in it's structure, as it's origins began and derived from using punch cards.</p>
+                    <p>First 6 columns used to organise punch cards.</p>
+                    <p>7th column is used for a * to denote a comment.</p>
+                </div>
+                <div>
+                    <h2>Divisions<a href="/code/divisionExample.cob">Code</a></h2>
+                    <p>Identification Division. Contains the Program-ID, author and date.</p>
+                    <p>Environment Division. Basically the environment the program is running on (the mainframe it's running on). The devices available, and regional specific information.</p>
+                    <p>Data Division. Has 4 sections, file, working-storage, linkage and report, containing variables related to the program.</p>
+                    <p>Procedure Division. The working program belongs here.</p>
+                </div>
+                <div>
+                    <h2>Variables<a href="/code/variableExample.cob">Code</a></h2>
+                    <p>Hierarchial in nature. The left most digits denote the level the variable sits compared to others. Usually sits within Data Division, under one of the sections. A typical variable would be written as</p>
+                    <p>01 MYVAR PIC X(30) VALUE "TENET".</p>
+                    <ul>
+                        <li>01 denotes the position in the hierarchical ladder</li>
+                        <li>MYVAR is the name of the variable</li>
+                        <li>PIC is a picture</li>
+                        <li>X is basically the Type in this case it's alphnumeric</li>
+                        <li>(30) denotes the length of the variable</li>
+                        <li>VALUE allows the variable to be initialised with a value which in this case it's TENET</li>
+                    </ul>
+                    <p>It's important to note that variables in COBOL are like arrays - hence the length of a variable is paramount when defining it. Hierarchical variables are the same.</p>
+                    <p>01 MOBILENUMBER.</p>
+                    <p>     02 COUNTRYCODE PIC 99.</p>
+                    <p>     02 NUM PIC 9(9).</p>
+        
+                    todo constants 8min mark
+                </div>
+            
+
+        
+            </div> 
+        </div> <!-- End Grid -->
+    </body>
+
+
     <body>
         <!-- NAVIGATION -->
         <nav><a href="index.html">Main</a> > <a href="/cobol.html">COBOL</a></nav>
        <!-- DETAILS -->
-        <h1>COBOL</h1>
-       <p>A brief overview of the COBOL programming language with personalised notes. Using Danny Companez and Derek Banas and as references.</p>
-       <p>Despite the many calls of modern programmers calling COBOL a dead language, it still reigns supreme (like good old Kimmy over in North Korea); dominating financial transactions across the world. US, Australia, parts of asia and China rely on COBOL to manage their financial transactions.</p>
-
-        <nav>
-            <ul>File Structure</ul>
-            <ul>Divisions</ul>
-        </nav>
-        <div>
-            <h2>File Structure</h2>
-            <p>You'll find that COBOL is semi based on columns in it's structure, as it's origins began and derived from using punch cards.</p>
-            <p>First 6 columns used to organise punch cards.</p>
-            <p>7th column is used for a * to denote a comment.</p>
-        </div>
-        <div>
-            <h2>Divisions<a href="/code/divisionExample.cob">Code</a></h2>
-            <p>Identification Division. Contains the Program-ID, author and date.</p>
-            <p>Environment Division. Basically the environment the program is running on (the mainframe it's running on). The devices available, and regional specific information.</p>
-            <p>Data Division. Has 4 sections, file, working-storage, linkage and report, containing variables related to the program.</p>
-            <p>Procedure Division. The working program belongs here.</p>
-        </div>
-        <div>
-            <h2>Variables<a href="/code/variableExample.cob">Code</a></h2>
-            <p>Hierarchial in nature. The left most digits denote the level the variable sits compared to others. Usually sits within Data Division, under one of the sections. A typical variable would be written as</p>
-            <p>01 MYVAR PIC X(30) VALUE "TENET".</p>
-            <ul>
-                <li>01 denotes the position in the hierarchical ladder</li>
-                <li>MYVAR is the name of the variable</li>
-                <li>PIC is a picture</li>
-                <li>X is basically the Type in this case it's alphnumeric</li>
-                <li>(30) denotes the length of the variable</li>
-                <li>VALUE allows the variable to be initialised with a value which in this case it's TENET</li>
-            </ul>
-            <p>It's important to note that variables in COBOL are like arrays - hence the length of a variable is paramount when defining it. Hierarchical variables are the same.</p>
-            <p>01 MOBILENUMBER.</p>
-            <p>     02 COUNTRYCODE PIC 99.</p>
-            <p>     02 NUM PIC 9(9).</p>
-
-            todo constants 8min mark
-        </div>
+        
     </body>
     <footer>
         <h6>Copyright MIT Licence Mark Wong 2021</h6>
