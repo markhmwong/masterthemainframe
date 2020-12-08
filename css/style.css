@@ -46,6 +46,7 @@ footer {
 }
 
 .secondary-title {
+    display: inline-block;
     font-size: 2.0em;
     color: #111111;
 }
